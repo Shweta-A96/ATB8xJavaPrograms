@@ -4,30 +4,34 @@ import java.util.Scanner;
 
 public class Triangle_classifier {
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
+        // Write a program that classifies a triangle based on its side lengths.
 
+// Given three input values representing the lengths of the sides, determine
 
-        System.out.print("Enter the length of side 1: ");
-        double side1 = sc.nextDouble();
+// if the triangle is equilateral (all sides are equal),
 
-        System.out.print("Enter the length of side 2: ");
-        double side2 = sc.nextDouble();
+// isosceles (exactly two sides are equal), or
 
-        System.out.print("Enter the length of side 3: ");
-        double side3 = sc.nextDouble();
+// scalene (no sides are equal).
 
+// Use an if-else statement to classify the triangle.
 
-        if (side1 >= 1 && side2 >= 1 && side3 >= 1) {
+// side1, side2, side3 ->
 
-            if (side1 == side2 && side1 == side3 && side2 == side3) {
-                System.out.println("Eq");
-            } else if (side1 == side2 || side1 == side3 || side2 == side3) {
-                System.out.println("ISO");
-            } else {
-                System.out.println("scalene");
-            }
+        int side1 = 30;
+        int side2 = 30;
+        int side3 = 30;
+
+        if (side1 == side2 && side2 == side3 && side3 == side1) {
+            System.out.println("triangle is equilateral when all sides are equal");
+        } else if (side1 == side2 && side2 != side3 && side3 != side1) {
+            System.out.println("triangle is isosceles when exactly two sides are equal");
+        } else if (side1 != side2 && side2 != side3 && side3 != side1) {
+            System.out.println("triangle is scalene when no sides are equal");
         }
     }
 }
+
+
 
 
